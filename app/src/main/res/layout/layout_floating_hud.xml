@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!-- 1. TOMBOL SHOW TRANSPARAN -->
+    <ImageButton
+        android:id="@+id/btnShowHud"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:alpha="0.20"
+        android:background="@drawable/bg_show_transparent"
+        android:contentDescription="Show HUD"
+        android:padding="11dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_eye_hud" />
+
+    <!-- 2. PANEL HUD WARNA HITAM -->
+    <LinearLayout
+        android:id="@+id/panelHudBlack"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_hud_black"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="● AI HUD"
+                android:textColor="#00E676"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnScan"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:background="@drawable/bg_btn_dark"
+                android:minWidth="74dp"
+                android:paddingHorizontal="10dp"
+                android:text="SCAN"
+                android:textColor="#00E676"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnToggleType"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/bg_btn_dark"
+                android:minWidth="62dp"
+                android:paddingHorizontal="8dp"
+                android:text="KETIK"
+                android:textColor="#E0E0E0"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnHideHud"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/bg_btn_dark"
+                android:padding="0dp"
+                android:text="—"
+                android:textColor="#BDBDBD"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- INPUT MANUAL (CADANGAN JIKA LAYAR DIBLOKIR FLAG_SECURE) -->
+        <LinearLayout
+            android:id="@+id/layoutManualInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/etManualQuestion"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_dark"
+                android:hint="Ketik soal singkat..."
+                android:imeOptions="actionSend"
+                android:inputType="text"
+                android:paddingHorizontal="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#757575"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnSendText"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_btn_dark"
+                android:minWidth="58dp"
+                android:paddingHorizontal="10dp"
+                android:text="TANYA"
+                android:textColor="#00E676"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#1F1F1F" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:maxHeight="170dp">
+
+            <TextView
+                android:id="@+id/tvAnswerResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="3dp"
+                android:text="Tekan SCAN untuk memindai soal di layar."
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+        </ScrollView>
+
+    </LinearLayout>
+</FrameLayout>

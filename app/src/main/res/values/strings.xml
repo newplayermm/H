@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AI Floating HUD</string>
+    <string name="accessibility_service_description">Menampilkan Floating HUD dan memindai soal pilihan ganda di layar tanpa ikon perekaman layar.</string>
+</resources>
